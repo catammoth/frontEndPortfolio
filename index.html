@@ -1,13 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcel's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcel's Portfolio</title>
-</head>
+  <body>
+    <script src="js/script.js"></script>
+    <header>
+      <div class="logo-image">
+        <img
+          src="img\Marcel_ProfessionalPhoto_Cropped.jpg"
+          alt="Marcel's Professional Photo"
+        />
+      </div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#profile">My Profile</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#message">Message Us</a>
+      </nav>
+    </header>
 
-<body>
-  
-</body>
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Marcel's <span class="highlight">Profile</span></h1>
+            <p class="hero-description">
+              Frontend Developer Newbie
+            </p>
+            <p class="hero-subtitle">
+              Welcome to my portfolio! I'm Marcel, a frontend developer
+              passionate about creating beautiful and functional websites.
+              Here, you'll find my projects and learn more about my journey in
+              the world of web development.
+            </p>
+            <div class="hero-buttons">
+              <a href="#profile" class="btn btn-primary">View My Profile</a>
+              <a href="#portfolio" class="btn btn-secondary">See Projects</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="img/Marcel_ProfessionalPhoto_Cropped.jpg"
+              alt="Marcel's Profile Picture"
+            />
+            <div class="hero-shape"></div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="profile">
+        <h2 style="font-size: 3em">My Profile</h2>
+        <div class="profile-container">
+          <div class="profile-image">
+            <img
+              src="img/Marcel_ProfessionalPhoto_Cropped.jpg"
+              alt="Marcel's Profile Picture"
+            />
+          </div>
+          <div class="profile-content">
+            <h3>Hi, I'm Marcel!</h3>
+            <p class="profile-intro">
+              A passionate frontend developer with a strong foundation in
+              building responsive and user-centric websites.
+            </p>
+            <div class="profile-details">
+              <div class="profile-section">
+                <h4>Current Focus</h4>
+                <p>
+                  Currently honing my skills through freeCodeCamp's bootcamp,
+                  specializing in:
+                </p>
+                <ul>
+                  <li>Semantic HTML</li>
+                  <li>Modern CSS layouts (Flexbox/Grid)</li>
+                  <li>Core JavaScript DOM manipulation</li>
+                </ul>
+              </div>
+
+              <div class="profile-section">
+                <h4>Experience</h4>
+                <ul>
+                  <li>AI Data Trainer (98%+ accuracy)</li>
+                  <li>Head Lab Assistant at Gunadarma University</li>
+                  <li>Team Management & Technical Module Development</li>
+                </ul>
+              </div>
+
+              <div class="profile-section">
+                <h4>Skills & Hobbies</h4>
+                <div class="skills-container">
+                  <span class="skill-tag">HTML</span>
+                  <span class="skill-tag">CSS</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Coding</span>
+                  <span class="skill-tag">Reading</span>
+                  <span class="skill-tag">Traveling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="portfolio">
+        <h2 style="font-size: 3em">My Portfolio</h2>
+        <p style="font-size: 1.2em; color: #555 ;">Check out my work and projects that I have completed.</p>
+        <div class="portfolio-container">
+          <a href="https://catammoth.github.io/contactUsTest/">Project 1</a>
+          <a href="https://catammoth.github.io/registrationForm/">Project 2</a>
+          <a href="https://catammoth.github.io/testNutritionFacts/">Project 3</a>
+        </div>
+      </section>
+
+      <section id="message">
+        <h2>Message Us</h2>
+        <div class="message-container">
+          <div class="message-form">
+            <form onsubmit="return false;">
+              <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="birthdate">Tanggal Lahir:</label>
+                <input type="date" id="birthdate" name="birthdate" required />
+              </div>
+
+              <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <div class="gender-options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Laki-Laki"
+                      required
+                    />
+                    Laki-Laki
+                  </label>
+                  <label>
+                    <input type="radio" name="gender" value="Perempuan" />
+                    Perempuan
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea>
+              </div>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="message-preview">
+            <h3>Waktu Sekarang:</h3>
+            <p id="current-time"></p>
+            <h3>Nama:</h3>
+            <p id="preview-name"></p>
+            <h3>Tanggal Lahir:</h3>
+            <p id="preview-birthdate"></p>
+            <h3>Jenis Kelamin:</h3>
+            <p id="preview-gender"></p>
+            <h3>Pesan:</h3>
+            <p id="preview-message"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>Created by Marcellino Garcia Karamoy &copy; 2025</footer>
+  </body>
 </html>
