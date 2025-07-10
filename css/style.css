@@ -362,35 +362,37 @@ footer {
 }
 
 /* Media Query for Responsive Design */
-@media (max-width: 768px) {
-  .profile-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-image {
-    flex: 0 0 200px;
-    margin-bottom: 30px;
-  }
-
-  .profile-content h3 {
-    text-align: center;
-  }
-
-  .profile-intro {
-    text-align: center;
-  }
-}
-
 @media (max-width: 968px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  nav > a {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
   .hero-content {
     flex-direction: column-reverse;
     text-align: center;
     padding: 40px 0;
+    height: auto;
+    min-height: 100vh;
   }
 
   .hero-image {
     flex: 0 0 300px;
+    margin-bottom: 30px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    padding: 0 20px;
   }
 
   .hero-text h1 {
@@ -405,9 +407,65 @@ footer {
     right: -10px;
     top: 10px;
   }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .profile-image {
+    flex: 0 0 200px;
+    margin-bottom: 30px;
+  }
+
+  .profile-content {
+    text-align: center;
+  }
+
+  .profile-details {
+    grid-template-columns: 1fr;
+  }
+
+  .message-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .message-preview {
+    margin-right: 0;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .gender-options {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-description {
+    font-size: 1.2em;
+  }
+
   .hero-buttons {
     flex-direction: column;
     gap: 15px;
@@ -418,12 +476,17 @@ footer {
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 2em;
+  .profile-section {
+    padding: 15px;
   }
 
-  .hero-description {
-    font-size: 1.2em;
+  .skills-container {
+    justify-content: center;
+  }
+
+  .portfolio-container a {
+    width: 100%;
+    text-align: center;
   }
 }
 
